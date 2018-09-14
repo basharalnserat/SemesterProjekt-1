@@ -1,0 +1,25 @@
+public class rækkefølge {
+
+    public static void main(String[] args) {
+        int[] personer = new int[5];
+        String[] navne = {"Oliver ", "Micheal ", "Bashar", "Daniel", "Steffen"};
+
+        for (int i = 0; i < personer.length; i++) {
+            personer[i] = i;
+        }
+
+        for (int i = 0; i < personer.length; i++) {
+            int index = (int) (Math.random() * personer.length);
+            int temp = personer[i];
+            personer[i] = personer[index];
+            personer[index] = temp;
+
+        }
+
+        for (int i = 0; i < 2; i++) {
+            String p = navne[personer[i] / 1];
+            System.out.println(p);
+        }
+
+    }
+}
